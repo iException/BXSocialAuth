@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06D65735C3D27B6D4D894402 /* Pods_BXSocialAuth_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B818ED48CD3DBFB038AB9D2A /* Pods_BXSocialAuth_Tests.framework */; };
+		55C724D8C5E6D431E0E796C8 /* libPods-BXSocialAuth_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0278F0913C9368F1DD1DEDDE /* libPods-BXSocialAuth_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,7 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		90C77D845FA196652A9D6392 /* Pods_BXSocialAuth_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C464C71C5D88E8C4B03FF3 /* Pods_BXSocialAuth_Example.framework */; };
+		EED040D20EC7F40F2CA1174A /* libPods-BXSocialAuth_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25903CFA2ACC672A85B455DB /* libPods-BXSocialAuth_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0278F0913C9368F1DD1DEDDE /* libPods-BXSocialAuth_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BXSocialAuth_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1067D022C6FF42CD87B6E793 /* Pods-BXSocialAuth_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXSocialAuth_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BXSocialAuth_Example/Pods-BXSocialAuth_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1AA8BFB3119DD6FDDFC44CC9 /* Pods-BXSocialAuth_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXSocialAuth_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXSocialAuth_Tests/Pods-BXSocialAuth_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		25903CFA2ACC672A85B455DB /* libPods-BXSocialAuth_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BXSocialAuth_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		352C891B36349E1D98DC217D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BXSocialAuth_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BXSocialAuth_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,11 +62,9 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		7FBA9075007A0E6DB3ED59C6 /* Pods-BXSocialAuth_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXSocialAuth_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BXSocialAuth_Example/Pods-BXSocialAuth_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		94C464C71C5D88E8C4B03FF3 /* Pods_BXSocialAuth_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BXSocialAuth_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AC05818436502D8D7681E2D /* BXSocialAuth.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BXSocialAuth.podspec; path = ../BXSocialAuth.podspec; sourceTree = "<group>"; };
+		9AC05818436502D8D7681E2D /* BXSocialAuth.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = BXSocialAuth.podspec; path = ../BXSocialAuth.podspec; sourceTree = "<group>"; };
 		A3CD269EE77B9328BABF71BD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B4CAB15DF54E008B7F18C897 /* Pods-BXSocialAuth_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BXSocialAuth_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BXSocialAuth_Tests/Pods-BXSocialAuth_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B818ED48CD3DBFB038AB9D2A /* Pods_BXSocialAuth_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BXSocialAuth_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				90C77D845FA196652A9D6392 /* Pods_BXSocialAuth_Example.framework in Frameworks */,
+				EED040D20EC7F40F2CA1174A /* libPods-BXSocialAuth_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				06D65735C3D27B6D4D894402 /* Pods_BXSocialAuth_Tests.framework in Frameworks */,
+				55C724D8C5E6D431E0E796C8 /* libPods-BXSocialAuth_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				94C464C71C5D88E8C4B03FF3 /* Pods_BXSocialAuth_Example.framework */,
-				B818ED48CD3DBFB038AB9D2A /* Pods_BXSocialAuth_Tests.framework */,
+				25903CFA2ACC672A85B455DB /* libPods-BXSocialAuth_Example.a */,
+				0278F0913C9368F1DD1DEDDE /* libPods-BXSocialAuth_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
