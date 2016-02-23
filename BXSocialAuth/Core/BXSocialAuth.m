@@ -12,6 +12,7 @@
 @interface BXSocialAuth ()
 
 @property (nonatomic) NSMutableDictionary<NSString *, BXSocialAuthProvider *> *providers;
+@property (nonatomic) BXSocialAuthProvider *currentProvider;
 
 @end
 
@@ -66,7 +67,24 @@
 #pragma mark - Authorizing
 
 - (void)authorize:(NSString *)providerKey completion:(BXSocialAuthCompletionHandler)completion {
+    BXSocialAuthProvider *provider = [self providerForKey:providerKey];
+    [self authorizeProvider:provider completion:completion];
+}
+
+
+- (void)authorizeProvider:(BXSocialAuthProvider *)provider completion:(BXSocialAuthCompletionHandler)completion {
+    self.currentProvider = provider;
+    [self.currentProvider authorizeWithCompletion:completion];
+}
+
+
+- (BOOL)handleCallbackURL:(NSURL *)URL {
+    NSParameterAssert(URL != nil);
     
+    NSAssert(self.currentProvider != nil, @"There is no provider waiting for single sign on callback.");
+    NSAssert([self.currentProvider conformsToProtocol:@protocol(BXSocialAuthSingleSignOnProvider)], @"The current provider does not handle single sign on.");
+    
+    return [(id<BXSocialAuthSingleSignOnProvider>)self.currentProvider handleCallbackURL:URL];
 }
 
 @end
