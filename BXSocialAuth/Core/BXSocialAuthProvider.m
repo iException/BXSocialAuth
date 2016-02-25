@@ -10,4 +10,30 @@
 
 @implementation BXSocialAuthProvider
 
+#pragma mark - Class Methods
+
++ (BOOL)isAppInstalled {
+    [self doesNotRecognizeSelector:_cmd];
+    return NO;
+}
+
+
++ (NSString *)type {
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
+}
+
+
+#pragma mark - Public
+
+- (void)authorizeWithCompletion:(BXSocialAuthCompletionHandler)completion {
+    [self doesNotRecognizeSelector:_cmd];
+}
+
+
+- (BOOL)handleCallbackURL:(NSURL *)URL {
+    [self doesNotRecognizeSelector:_cmd];
+    return NO;
+}
+
 @end

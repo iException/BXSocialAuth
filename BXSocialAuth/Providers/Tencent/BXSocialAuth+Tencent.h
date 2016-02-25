@@ -10,4 +10,7 @@
 
 @interface BXSocialAuth (Tencent)
 
+- (void)registerTencentWithAppID:(NSString *)appID;
+- (void)authorizeTencentWithCompletion:(BXSocialAuthCompletionHandler)completion;
+
 @end

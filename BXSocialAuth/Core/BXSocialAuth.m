@@ -82,9 +82,7 @@
     NSParameterAssert(URL != nil);
     
     NSAssert(self.currentProvider != nil, @"There is no provider waiting for single sign on callback.");
-    NSAssert([self.currentProvider conformsToProtocol:@protocol(BXSocialAuthSingleSignOnProvider)], @"The current provider does not handle single sign on.");
-    
-    return [(id<BXSocialAuthSingleSignOnProvider>)self.currentProvider handleCallbackURL:URL];
+    return [self.currentProvider handleCallbackURL:URL];
 }
 
 @end

@@ -9,11 +9,14 @@
 @import Foundation;
 
 FOUNDATION_EXPORT NSString *const BXSocialAuthErrorDomain;
+FOUNDATION_EXPORT NSString *const BXSocialAuthErrorUserInfoMessageKey;
+
 
 typedef NS_ENUM(NSInteger, BXSocialAuthErrorCode) {
     BXSocialAuthErrorCodeUnknown = 1000,
     BXSocialAuthErrorCodeUserCancelled,
     BXSocialAuthErrorCodeNetwork,
+    BXSocialAuthErrorCodeBadRequest,
 };
 
 typedef void (^BXSocialAuthCompletionHandler)(id responseObject, NSError *error);

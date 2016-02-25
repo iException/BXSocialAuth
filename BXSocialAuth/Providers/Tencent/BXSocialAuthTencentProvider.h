@@ -10,4 +10,8 @@
 
 @interface BXSocialAuthTencentProvider : BXSocialAuthProvider
 
+@property (nonatomic, copy) NSArray<NSString *> *permissions;
+
+- (instancetype)initWithAppID:(NSString *)appID;
+
 @end

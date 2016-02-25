@@ -9,3 +9,4 @@
 #import "BXSocialAuthDefines.h"
 
 NSString *const BXSocialAuthErrorDomain = @"BXSocialAuth";
+NSString *const BXSocialAuthErrorUserInfoMessageKey = @"message";

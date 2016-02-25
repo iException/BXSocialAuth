@@ -10,20 +10,12 @@
 
 @interface BXSocialAuthProvider : NSObject
 
-@property (nonatomic, readonly, copy) NSDictionary *options;
+@property (nonatomic, copy) BXSocialAuthCompletionHandler completionHandler;
 
 + (NSString *)type;
-+ (NSDictionary *)defaultOptions;
++ (BOOL)isAppInstalled;
 
-- (instancetype)initWithOptions:(NSDictionary *)options;
 - (void)authorizeWithCompletion:(BXSocialAuthCompletionHandler)completion;
-
-@end
-
-
-@protocol BXSocialAuthSingleSignOnProvider <NSObject>
-
-@required
 - (BOOL)handleCallbackURL:(NSURL *)URL;
 
 @end

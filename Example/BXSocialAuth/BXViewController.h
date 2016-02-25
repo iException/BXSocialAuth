@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface BXViewController : UIViewController
+@interface BXViewController : UITableViewController
 
 @end

@@ -8,7 +8,11 @@
 
 #import "BXAppDelegate.h"
 #import "BXViewController.h"
-#import <BXSocialAuth/BXSocialAuth.h>
+#import <BXSocialAuth/BXSocialAuth+Tencent.h>
+#import <BXSocialAuth/BXSocialAuth+WeChat.h>
+
+static NSString *const kBXSocialAuthDemoWeChatAppID = @"YOUR_WECHAT_APP_ID";
+static NSString *const kBXSocialAuthDemoTencentAppID = @"YOUR_TENCENT_APP_ID";
 
 @implementation BXAppDelegate
 
@@ -17,9 +21,34 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[BXViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[BXViewController alloc] init]];
+    [self configureAuthorizaionProviders];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [[BXSocialAuth sharedInstance] handleCallbackURL:url];
+}
+
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [[BXSocialAuth sharedInstance] handleCallbackURL:url];
+}
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    return [[BXSocialAuth sharedInstance] handleCallbackURL:url];
+}
+
+
+#pragma mark - Private
+
+- (void)configureAuthorizaionProviders {
+    BXSocialAuth *socialAuth = [BXSocialAuth sharedInstance];
+    [socialAuth registerTencentWithAppID:kBXSocialAuthDemoWeChatAppID];
+    [socialAuth registerWeChatWithAppID:kBXSocialAuthDemoTencentAppID];
 }
 
 @end

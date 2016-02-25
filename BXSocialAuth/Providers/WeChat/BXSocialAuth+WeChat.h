@@ -10,4 +10,7 @@
 
 @interface BXSocialAuth (WeChat)
 
+- (void)registerWeChatWithAppID:(NSString *)appID;
+- (void)authorizeWeChatWithCompletion:(BXSocialAuthCompletionHandler)completion;
+
 @end

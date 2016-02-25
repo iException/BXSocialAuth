@@ -10,4 +10,6 @@
 
 @interface BXSocialAuthWeChatProvider : BXSocialAuthProvider
 
+- (instancetype)initWithAppID:(NSString *)appID;
+
 @end

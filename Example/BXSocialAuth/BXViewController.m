@@ -7,23 +7,57 @@
 //
 
 #import "BXViewController.h"
+#import <BXSocialAuth/BXSocialAuth+WeChat.h>
+#import <BXSocialAuth/BXSocialAuth+Tencent.h>
 
 @interface BXViewController ()
 
+@property (nonatomic) NSArray<NSString *> *providerKeys;
+
 @end
+
 
 @implementation BXViewController
 
-- (void)viewDidLoad
-{
+#pragma mark - UIViewController
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"BXSocialAuthDemo";
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    self.providerKeys = @[@"WeChat", @"Tencent"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.providerKeys.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.text = self.providerKeys[indexPath.row];
+    
+    return cell;
+}
+
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *providerKey = self.providerKeys[indexPath.row];
+    [[BXSocialAuth sharedInstance] authorize:providerKey completion:^(id responseObject, NSError *error) {
+        NSLog(@"completion handler");
+    }];
 }
 
 @end

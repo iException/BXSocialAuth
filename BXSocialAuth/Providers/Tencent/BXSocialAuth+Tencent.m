@@ -7,7 +7,20 @@
 //
 
 #import "BXSocialAuth+Tencent.h"
+#import "BXSocialAuthTencentProvider.h"
 
 @implementation BXSocialAuth (Tencent)
+
+- (void)registerTencentWithAppID:(NSString *)appID {
+    NSParameterAssert(appID != nil);
+    
+    BXSocialAuthProvider *provider = [[BXSocialAuthTencentProvider alloc] initWithAppID:appID];
+    [self setProvider:provider forKey:[BXSocialAuthTencentProvider type]];
+}
+
+
+- (void)authorizeTencentWithCompletion:(BXSocialAuthCompletionHandler)completion {
+    [self authorize:[BXSocialAuthTencentProvider type] completion:completion];
+}
 
 @end
