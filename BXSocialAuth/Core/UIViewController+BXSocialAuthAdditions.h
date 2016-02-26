@@ -1,9 +1,9 @@
 //
 //  UIViewController+BXSocialAuthAdditions.h
-//  Pods
+//  BXSocialAuth
 //
 //  Created by Yiming Tang on 2/24/16.
-//
+//  Copyright (c) 2016 Yiming Tang. All rights reserved.
 //
 
 @import UIKit;

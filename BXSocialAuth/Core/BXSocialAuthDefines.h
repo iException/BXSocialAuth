@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger, BXSocialAuthErrorCode) {
     BXSocialAuthErrorCodeUserCancelled,
     BXSocialAuthErrorCodeNetwork,
     BXSocialAuthErrorCodeBadRequest,
+    BXSocialAuthErrorCodeAccessDenied,
 };
 
 typedef void (^BXSocialAuthCompletionHandler)(id responseObject, NSError *error);
