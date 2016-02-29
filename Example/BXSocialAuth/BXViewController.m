@@ -25,9 +25,8 @@
     [super viewDidLoad];
     
     self.title = @"BXSocialAuthDemo";
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
     self.providerKeys = @[@"WeChat", @"Tencent"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
 
@@ -46,7 +45,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = self.providerKeys[indexPath.row];
-    
     return cell;
 }
 
@@ -55,8 +53,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *providerKey = self.providerKeys[indexPath.row];
-    [[BXSocialAuth sharedInstance] authorize:providerKey completion:^(id responseObject, NSError *error) {
-        NSLog(@"completion handler");
+    [[BXSocialAuth sharedInstance] authorize:providerKey completion:^(BXSocialAuthResult *result, NSError *error) {
+        NSLog(@"Result: %@", result);
     }];
 }
 

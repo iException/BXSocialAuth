@@ -7,6 +7,7 @@
 //
 
 #import "BXSocialAuthTencentProvider.h"
+#import "BXSocialAuthTencentAuthResult.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 
 @interface BXSocialAuthTencentProvider () <TencentSessionDelegate>
@@ -23,6 +24,7 @@
 + (NSString *)type {
     return @"Tencent";
 }
+
 
 + (BOOL)isAppInstalled {
     return [TencentOAuth iphoneQQInstalled] || [TencentOAuth iphoneQZoneInstalled];
@@ -68,12 +70,17 @@
 #pragma mark - TencentSessionDelegate
 
 - (void)tencentDidLogin {
-    NSLog(@"Login Succeeded");
+    NSString *accessToken = self.tencentOAuth.accessToken;
+    NSDate *expirationDate = self.tencentOAuth.expirationDate;
+    NSString *openID = self.tencentOAuth.openId;
+    BXSocialAuthTencentAuthResult *result = [[BXSocialAuthTencentAuthResult alloc] initWithAccessToken:accessToken expirationDate:expirationDate openID:openID];
+    self.completionHandler(result, nil);
 }
 
 
 - (void)tencentDidNotLogin:(BOOL)cancelled {
-    NSError *error = [NSError errorWithDomain:BXSocialAuthErrorDomain code:BXSocialAuthErrorCodeUserCancelled userInfo:nil];
+    BXSocialAuthErrorCode errorCode = cancelled ? BXSocialAuthErrorCodeUserCancelled : BXSocialAuthErrorCodeUnknown;
+    NSError *error = [NSError errorWithDomain:BXSocialAuthErrorDomain code:errorCode userInfo:nil];
     self.completionHandler(nil, error);
 }
 

@@ -47,8 +47,8 @@ static NSString *const kBXSocialAuthDemoTencentAppID = @"YOUR_TENCENT_APP_ID";
 
 - (void)configureAuthorizaionProviders {
     BXSocialAuth *socialAuth = [BXSocialAuth sharedInstance];
-    [socialAuth registerTencentWithAppID:kBXSocialAuthDemoWeChatAppID];
-    [socialAuth registerWeChatWithAppID:kBXSocialAuthDemoTencentAppID];
+    [socialAuth registerTencentWithAppID:kBXSocialAuthDemoTencentAppID];
+    [socialAuth registerWeChatWithAppID:kBXSocialAuthDemoWeChatAppID];
 }
 
 @end

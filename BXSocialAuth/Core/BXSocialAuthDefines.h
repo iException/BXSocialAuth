@@ -8,9 +8,10 @@
 
 @import Foundation;
 
+@class BXSocialAuthResult;
+
 FOUNDATION_EXPORT NSString *const BXSocialAuthErrorDomain;
 FOUNDATION_EXPORT NSString *const BXSocialAuthErrorUserInfoMessageKey;
-
 
 typedef NS_ENUM(NSInteger, BXSocialAuthErrorCode) {
     BXSocialAuthErrorCodeUnknown = 1000,
@@ -20,4 +21,4 @@ typedef NS_ENUM(NSInteger, BXSocialAuthErrorCode) {
     BXSocialAuthErrorCodeAccessDenied,
 };
 
-typedef void (^BXSocialAuthCompletionHandler)(id responseObject, NSError *error);
+typedef void (^BXSocialAuthCompletionHandler)(BXSocialAuthResult *result, NSError *error);

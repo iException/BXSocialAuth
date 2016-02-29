@@ -23,8 +23,15 @@
 }
 
 
-- (NSString *)description {
-    return [NSString stringWithFormat:@"<WeChatAuthResult>:{\n\tcode: %@,\n\tlanguage: %@,\n\tcountry: %@\n}", self.code, self.language, self.country];
+#pragma mark - BXSocialAuthResult
+
+- (NSDictionary *)dictionaryRepresentation {
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    dictionary[@"code"] = self.code;
+    dictionary[@"language"] = self.language;
+    dictionary[@"country"] = self.country;
+    
+    return dictionary;
 }
 
 @end

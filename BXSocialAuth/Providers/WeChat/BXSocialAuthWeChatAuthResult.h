@@ -6,13 +6,13 @@
 //  Copyright (c) 2016 Yiming Tang. All rights reserved.
 //
 
-@import Foundation;
+#import <BXSocialAuth/BXSocialAuthResult.h>
 
-@interface BXSocialAuthWeChatAuthResult : NSObject
+@interface BXSocialAuthWeChatAuthResult : BXSocialAuthResult
 
-@property (nonatomic, readonly) NSString *code;
-@property (nonatomic, readonly) NSString *language;
-@property (nonatomic, readonly) NSString *country;
+@property (nonatomic, copy, readonly) NSString *code;
+@property (nonatomic, copy, readonly) NSString *language;
+@property (nonatomic, copy, readonly) NSString *country;
 
 - (instancetype)initWithCode:(NSString *)code language:(NSString *)language country:(NSString *)country;
 
