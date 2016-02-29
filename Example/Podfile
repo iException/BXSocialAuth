@@ -6,7 +6,8 @@ target 'BXSocialAuth_Example', :exclusive => true do
 end
 
 target 'BXSocialAuth_Tests', :exclusive => true do
-  pod 'BXSocialAuth', :path => '../'
+  # pod 'BXSocialAuth', :path => '../'
   pod 'Specta'
   pod 'Expecta'
+  pod 'OCMock'
 end
