@@ -80,7 +80,6 @@
 
 - (BOOL)handleCallbackURL:(NSURL *)URL {
     NSParameterAssert(URL != nil);
-    NSAssert(self.currentProvider != nil, @"There is no provider waiting for single sign on callback.");
     
     if (!self.currentProvider) {
         return NO;
