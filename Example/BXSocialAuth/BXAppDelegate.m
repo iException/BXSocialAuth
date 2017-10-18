@@ -7,7 +7,8 @@
 //
 
 #import "BXAppDelegate.h"
-#import "BXViewController.h"
+#import "BXSocialAuth_Example-Swift.h"
+//#import "BXViewController.h"
 #import <BXSocialAuth/BXSocialAuth+Tencent.h>
 #import <BXSocialAuth/BXSocialAuth+WeChat.h>
 
@@ -21,7 +22,8 @@ static NSString *const kBXSocialAuthDemoTencentAppID = @"YOUR_TENCENT_APP_ID";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[BXViewController alloc] init]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[BXViewController alloc] init]];
     [self configureAuthorizaionProviders];
     [self.window makeKeyAndVisible];
     return YES;

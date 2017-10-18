@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/yiming_t'
   s.platform         = :ios, '7.0'
   s.requires_arc     = true
+  s.static_framework = true
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'BXSocialAuth/Core'
@@ -21,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'WeChat' do |ss|
     ss.dependency 'BXSocialAuth/Core'
-    ss.dependency 'BXWeChatSDK'
+    ss.dependency 'WechatOpenSDK'
     ss.source_files = 'BXSocialAuth/Providers/WeChat'
   end
 

@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"BXSocialAuthDemo";
+    self.title = @"BXSocialAuthDemo Obj-C";
     self.providerKeys = @[@"WeChat", @"Tencent"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }

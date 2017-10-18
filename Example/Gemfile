@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+# CocoaPods 1.4.0 is not available, so we use master branch.
+gem 'cocoapods', :git => 'https://github.com/CocoaPods/CocoaPods.git', :branch => 'master'
+gem 'cocoapods-core', :git => 'https://github.com/CocoaPods/Core.git', :branch => 'master'

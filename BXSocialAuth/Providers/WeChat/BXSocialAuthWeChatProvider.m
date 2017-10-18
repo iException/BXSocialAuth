@@ -9,7 +9,7 @@
 #import "BXSocialAuthWeChatProvider.h"
 #import "BXSocialAuthWeChatAuthResult.h"
 #import <BXSocialAuth/UIViewController+BXSocialAuthAdditions.h>
-#import <BXWeChatSDK/WXApi.h>
+#import <WechatOpenSDK/WXApi.h>
 
 @interface BXSocialAuthWeChatProvider () <WXApiDelegate>
 

@@ -9,14 +9,14 @@ PODS:
     - BXTencentOpenAPI
   - BXSocialAuth/WeChat (0.1.0):
     - BXSocialAuth/Core
-    - BXWeChatSDK
+    - WechatOpenSDK
   - BXTencentOpenAPI (2.9.5):
     - BXTencentOpenAPI/Basic (= 2.9.5)
   - BXTencentOpenAPI/Basic (2.9.5)
-  - BXWeChatSDK (1.6.2)
   - Expecta (1.0.5)
   - OCMock (3.2.2)
   - Specta (1.0.5)
+  - WechatOpenSDK (1.8.0)
 
 DEPENDENCIES:
   - BXSocialAuth (from `../`)
@@ -26,14 +26,16 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   BXSocialAuth:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  BXSocialAuth: 15b70643e7894444e1b0941d27217d0470d87152
+  BXSocialAuth: 6a86057811a36b3ac57d43c17a455ebeda150194
   BXTencentOpenAPI: 96d941aacfde20adb3ebac6460cbbbea647ff08d
-  BXWeChatSDK: 7964decb5c774b8cb3cc878a3171fade43f9902c
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   OCMock: 18c9b7e67d4c2770e95bb77a9cc1ae0c91fe3835
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
+  WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: da9ea53a92523b2fabd5ff9b5dfaf64ab357514b
+
+COCOAPODS: 1.4.0.beta.1
