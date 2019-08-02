@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BXSocialAuth"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Social authentication for iOS."
   s.description      = <<-DESC
                        BXSocialAuth is designed to handle social authentication.
