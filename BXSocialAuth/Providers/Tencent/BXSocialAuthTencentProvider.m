@@ -27,7 +27,7 @@
 
 
 + (BOOL)isAppInstalled {
-    return [TencentOAuth iphoneQQInstalled] || [TencentOAuth iphoneQZoneInstalled];
+    return [TencentOAuth iphoneQQInstalled];
 }
 
 
